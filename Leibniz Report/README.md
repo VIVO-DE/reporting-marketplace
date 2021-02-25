@@ -34,7 +34,7 @@ Die Abfrage bezieht sich auf die Publikationen eines bestimmten Jahres. Hierzu d
 ```
 ### Step 2: Data Distributor für Open-Access-Publikationen
 
-Wählen Sie bei die Option _Select from Graph Distributor_. 
+Wählen Sie bei der Erstellung die Option _Select from Graph Distributor_. 
 
 Jeder Publikationstyp (und die Summe) wird in einer UNION-Abfrage ausgewertet, so dass eine einzelne Zeile mit einer Variablenbindung (Spalte) für jede benötigte Summe zurückgegeben wird.
 

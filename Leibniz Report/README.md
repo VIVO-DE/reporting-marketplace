@@ -45,7 +45,7 @@ SELECT
     (COUNT(DISTINCT ?publicationAAPR) AS ?peerreviewed)
     (COUNT(DISTINCT ?publicationBook) AS ?books)
     (COUNT(DISTINCT ?publicationReport) AS ?reports)
-	(COUNT(DISTINCT ?publicationProposal) AS ?proposals)
+    (COUNT(DISTINCT ?publicationProposal) AS ?proposals)
     (COUNT(DISTINCT ?publicationChapter) AS ?chapters)
     (COUNT(DISTINCT ?publicationConfPaper) AS ?confpapers)
     (COUNT(DISTINCT ?publicationSlideshow) AS ?slideshows)

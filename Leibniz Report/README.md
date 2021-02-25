@@ -36,6 +36,8 @@ Die Abfrage bezieht sich auf die Publikationen eines bestimmten Jahres. Hierzu d
 
 Wählen Sie bei der Erstellung die Option _Select from Graph Distributor_. 
 
+Sie können die einzelnen Publikationstypen (in Abschnitten *COUNT(DISTINCT ?...)AS ?... )* und *UNION {...}*) je nach Bedarf entfernen oder hinzufügen. 
+
 Jeder Publikationstyp (und die Summe) wird in einer UNION-Abfrage ausgewertet, so dass eine einzelne Zeile mit einer Variablenbindung (Spalte) für jede benötigte Summe zurückgegeben wird.
 
 ```
@@ -89,13 +91,11 @@ WHERE
         ?publicationReport a <http://vivoweb.org/ontology/core#WorkingPaper> .
         ?publicationReport <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
     }
-  ## Added the kdsf:ArbeitspapierForschungsbericht as Report
-  UNION
+   UNION
     {
         ?publicationReport a <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> .
         ?publicationReport <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
     }
-  ## Added vivo:ResearchProposal
    UNION
     {
         ?publicationProposal a <http://vivoweb.org/ontology/core#ResearchProposal> .
@@ -156,11 +156,127 @@ WHERE
 Wählen Sie anschließend den oben genannten Contruct Query Graph Builder. Die Abfrage wird dann nur gegen die Teilmenge der Daten ausgeführt, die sich auf die Publikationen für das gewählte Jahr beziehen.
 
 
+### Schritt 3: Data Distributor für Nicht-Open-Access-Publikationen
+
+Wählen Sie bei der Erstellung die Option _Select from Graph Distributor_. 
+
+Sie können die einzelnen Publikationstypen (in Abschnitten *COUNT(DISTINCT ?...)AS ?... )* und *UNION {...}*) je nach Bedarf entfernen oder hinzufügen. 
+
+Jeder Publikationstyp (und die Summe) wird in einer UNION-Abfrage ausgewertet, so dass eine einzelne Zeile mit einer Variablenbindung (Spalte) für jede benötigte Summe zurückgegeben wird.
 
 
-
-
-
-
+```
+SELECT
+    (COUNT(DISTINCT ?publication) AS ?total)
+    (COUNT(DISTINCT ?publicationAA) AS ?articles)
+    (COUNT(DISTINCT ?publicationAAPR) AS ?peerreviewed)
+    (COUNT(DISTINCT ?publicationBook) AS ?books)
+    (COUNT(DISTINCT ?publicationReport) AS ?reports)
+	  (COUNT(DISTINCT ?publicationProposal) AS ?proposals)
+    (COUNT(DISTINCT ?publicationChapter) AS ?chapters)
+    (COUNT(DISTINCT ?publicationConfPaper) AS ?confpapers)
+    (COUNT(DISTINCT ?publicationSlideshow) AS ?slideshows)
+    (COUNT(DISTINCT ?publicationDataset) AS ?datasets)
+    (COUNT(DISTINCT ?publicationConfPoster) AS ?confposters)
+    (COUNT(DISTINCT ?publicationManual) AS ?manuals)
+    (COUNT(DISTINCT ?publicationEA) AS ?editorials)
+    (COUNT(DISTINCT ?publicationAbstract) AS ?abstracts)
+    (COUNT(DISTINCT ?publicationThesis) AS ?theses)
+    (COUNT(DISTINCT ?publicationVideo) AS ?videos)
+WHERE
+{
+    {
+        ?publication a ?type .
+        MINUS { ?publication <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationAA a <http://purl.org/ontology/bibo/AcademicArticle> .
+        MINUS { ?publicationAA <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationAAPR a <http://purl.org/ontology/bibo/AcademicArticle> .
+        ?publicationAAPR <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/peerReviewed> .
+        MINUS { ?publicationAAPR <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationBook a <http://purl.org/ontology/bibo/Book> .
+        MINUS { ?publicationBook <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+        MINUS { ?publicationBook a <http://purl.org/ontology/bibo/Proceedings> . }
+    }
+    UNION
+    {
+        ?publicationReport a <http://purl.org/ontology/bibo/Report> .
+        MINUS { ?publicationReport <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+   UNION
+    {
+        ?publicationReport a <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> .
+        MINUS { ?publicationReport <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .}
+    }
+   UNION
+    {
+        ?publicationReport a <http://vivoweb.org/ontology/core#WorkingPaper> .
+        MINUS { ?publicationReport <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .}
+    }
+   UNION
+    {
+        ?publicationProposal a <http://vivoweb.org/ontology/core#ResearchProposal> .
+        MINUS { ?publicationProposal <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationChapter a <http://purl.org/ontology/bibo/Chapter> .
+        MINUS { ?publicationChapter <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationConfPaper a <http://vivoweb.org/ontology/core#ConferencePaper> .
+        MINUS { ?publicationConfPaper <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationSlideshow a <http://purl.org/ontology/bibo/Slideshow> .
+        MINUS { ?publicationSlideshow <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationDataset a <http://vivoweb.org/ontology/core#Dataset> .
+        MINUS { ?publicationDataset <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationConfPoster a <http://vivoweb.org/ontology/core#ConferencePoster> .
+        MINUS { ?publicationConfPoster <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationManual a <http://purl.org/ontology/bibo/Manual> .
+        MINUS { ?publicationManual <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationEA a <http://vivoweb.org/ontology/core#EditorialArticle> .
+        MINUS { ?publicationEA <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationAbstract a <http://vivoweb.org/ontology/core#Abstract> .
+        MINUS { ?publicationAbstract <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationThesis a <http://purl.org/ontology/bibo/Thesis> .
+        MINUS { ?publicationThesis <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+    UNION
+    {
+        ?publicationVideo a <http://vivoweb.org/ontology/core#Video> .
+        MINUS { ?publicationVideo <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
+    }
+}
+```
 
 

@@ -11,7 +11,7 @@ CONSTRUCT {
   OPTIONAL { ?publication <http://purl.org/ontology/bibo/status> ?status . }
   ?publication <http://vivoweb.org/ontology/core#dateTimeValue>  ?dateTimeObj .
   ?dateTimeObj  <http://vivoweb.org/ontology/core#dateTime> ?dateTime .
-  FILTER (STRSTARTS(str(?dateTime), "2019"))
+  FILTER (STRSTARTS(str(?dateTime), "2020"))
   MINUS { ?publication a <http://vivoweb.org/ontology/core#BlogPosting> . }
   MINUS { ?publication a <http://kerndatensatz-forschung.de/owl/Basis#Software> . }
   MINUS {

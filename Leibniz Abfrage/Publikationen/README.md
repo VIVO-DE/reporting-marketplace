@@ -4,7 +4,7 @@ Wie erstelle ich einen Publikationsbericht für die Lebniz-Abfrage mit Vitro Que
 
 ## Data Distributor
 
-### Schritt 1: Contruct Query Graph Builder für Publikationen aus dem Berichtsjahr
+### Schritt 1: Construct Query Graph Builder für Publikationen aus dem Berichtsjahr erstellen
 
 Die Abfrage bezieht sich auf die Publikationen eines bestimmten Jahres. Hierzu dient die Filterbedingung FILTER (STRSTARTS(str(?dateTime), "2019")). Es werden die URIs der Publikationen zusammen mit ihren Typ-Informationen und Informationen zum Open Access abgerufen. 
 
@@ -32,7 +32,7 @@ Die Abfrage bezieht sich auf die Publikationen eines bestimmten Jahres. Hierzu d
   }
 }/
 ```
-### Step 2: Data Distributor für Open-Access-Publikationen
+### Step 2: Data Distributor für Open-Access-Publikationen erstellen
 
 Wählen Sie bei der Erstellung die Option _Select from Graph Distributor_. 
 
@@ -156,7 +156,7 @@ WHERE
 Wählen Sie anschließend den oben genannten Contruct Query Graph Builder. Die Abfrage wird dann nur gegen die Teilmenge der Daten ausgeführt, die sich auf die Publikationen für das gewählte Jahr beziehen.
 
 
-### Schritt 3: Data Distributor für Nicht-Open-Access-Publikationen
+### Schritt 3: Data Distributor für Nicht-Open-Access-Publikationen erstellen
 
 Wählen Sie bei der Erstellung die Option _Select from Graph Distributor_. 
 
@@ -279,7 +279,9 @@ WHERE
 }
 ```
 
-### Schritt 4: Report erstellen -> http://vivo.../.../admin/reporting
+### Schritt 4: Report erstellen
+
+**Die Verwaltung von den Reports findet unter http://vivo.../.../admin/reporting statt.**
 
 1. Wählen Sie die Option _Excel Template_ und klicken Sie auf _Add Report_.
 2. In dem Menu _Excel Template_ benennen Sie den Report - z. B. _publications 2020_.

@@ -288,12 +288,12 @@ WHERE
 
 Laden Sie die Excel-Vorlage hoch.
 
-Die Vorlage muss zwei Tabellen enthalten. Markieren Sie für jede Tabelle alle Zellen (auch die Überschriften / Beschriftungen) und vergeben Sie die Namen "openaccess" / "nonopenaccess".
+Die Vorlage muss zwei Tabellen enthalten. Markieren Sie für jede Tabelle alle Zellen (auch die Überschriften / Beschriftungen) und vergeben Sie die Namen _openaccess_ / _nonopenaccess_.
 
-Verwenden Sie in jeder Tabelle die Variablen aus der Abfrage plus ".value" als Pfad zur Ausgabe der Werte. Z. B:
+Verwenden Sie in jeder Tabelle die Variablen aus der Abfrage plus _.value_ als Pfad zur Ausgabe der Werte. Z. B:
 
 
-
+![Beispiel Excel Template](https://github.com/VIVO-DE/reporting-marketplace/blob/main/Leibniz%20Report/Beispiel%20Excel%20Template.PNG) 
 
 
 

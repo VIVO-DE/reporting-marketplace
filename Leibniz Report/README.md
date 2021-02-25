@@ -279,4 +279,22 @@ WHERE
 }
 ```
 
+### Schritt 4: Report erstellen -> http://vivo.../.../admin/reporting
+
+1. Wählen Sie die Option _Excel Template_ und klicken Sie auf _Add Report_.
+2. In dem Menu _Excel Template_ benennen Sie den Report - z. B. _publications 2020_.
+3. Wählen Sie den Open-Access-Distributor - _openaccess2020_, vergeben Sie einen Ausgangsnamen von _openaccess_. 
+4. Wählen Sie den Nicht-Open-Access-Distributor - _nonopenaccess2020_, weisen Sie einen Ausgangsnamen _nonopenaccess_ zu. 
+
+Laden Sie die Excel-Vorlage hoch.
+
+Die Vorlage muss zwei Tabellen enthalten. Markieren Sie für jede Tabelle alle Zellen (auch die Überschriften / Beschriftungen) und vergeben Sie die Namen "openaccess" / "nonopenaccess".
+
+Verwenden Sie in jeder Tabelle die Variablen aus der Abfrage plus ".value" als Pfad zur Ausgabe der Werte. Z. B:
+
+
+
+
+
+
 

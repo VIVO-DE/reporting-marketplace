@@ -32,7 +32,7 @@ Die Abfrage bezieht sich auf die Publikationen eines bestimmten Jahres. Hierzu d
   }
 }/
 ```
-### Step 2: Data Distributor für Open-Access-Publikationen erstellen
+### Schritt 2: Data Distributor für Open-Access-Publikationen erstellen
 
 Wählen Sie bei der Erstellung die Option _Select from Graph Distributor_. 
 

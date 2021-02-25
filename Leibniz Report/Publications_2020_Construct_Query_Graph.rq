@@ -6,7 +6,6 @@ CONSTRUCT {
 } WHERE {
   ?publication a <http://purl.org/ontology/bibo/Document> .
   ?publication a ?type .
-  ?publication <https://vivo.tib.eu/fis/ontology/tib-vivo#validated> true .
   OPTIONAL { ?publication <http://www.w3.org/2000/01/rdf-schema#label> ?label . }
   OPTIONAL { ?publication <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> ?access . }
   OPTIONAL { ?publication <http://purl.org/ontology/bibo/status> ?status . }

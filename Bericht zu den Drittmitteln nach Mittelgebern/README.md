@@ -36,7 +36,7 @@ Where {
  FILTER (STRSTARTS(str(?startdate), "2020"))
 }
 ```
-### Schritt 2: Select from Graph Distributor 
+### Schritt 2: Konfiguration der Select from Graph Distributors 
 Für die Gesamtsumme der Drittmittel im Jahr und für jeden Drittmittelgeber wird jeweils ein separater *Select from Graph* Distributor angelegt.
 
 #### Select from Graph Distributor für die Gesamtsumme "drittmittel_total"
@@ -54,7 +54,7 @@ Where {
  	
 }
 ```
-#### Select from Graph Distributor für die DFG-Summe "drittmittel_dfg"
+#### Select from Graph Distributor "drittmittel_dfg"
 Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*. Ersetzen Sie <http://your.vivo/data/dfg_uri_here> durch die URI der Instanz für DFG aus Ihrem VIVO.
 
 ```
@@ -69,8 +69,9 @@ Where
 }
 
 ```
-#### Select from Graph Distributor für die DFG-Summe "drittmittel_bund"
-Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*.
+#### Select from Graph Distributor "drittmittel_bund"
+Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*. Ersetzen Sie <http://your.vivo/data/bmbf_uri_here>, <http://your.vivo/data/bmg_uri_here>, <http://your.vivo/data/bmwi_uri_here> durch die URI der Instanzen für Bundesministerien aus Ihrem VIVO. Die Liste der Bundesministerien in *Value {}* kann je nach Bedarf erweitert bzw. gekürzt werden.
+
 ```
 Select 
 (sum ( ?budget_bund) as ?bund)
@@ -79,11 +80,11 @@ Where
 {
   ?project_bund a <http://vivoweb.org/ontology/core#Grant> .
   ?project_bund <http://vivoweb.org/ontology/core#assignedBy> ?funder_bund . 
-  ?funder_bund a <http://vivoweb.org/ontology/core#GovernmentAgency> .
+  Values ?funder_bund {<http://your.vivo/data/bmbf_uri_here> <http://your.vivo/data/bmg_uri_here> <http://your.vivo/data/bmwi_uri_here>}. # An dieser Stelle müssen die URIs der Ministerien aus Ihrem VIVO eingesetzt werden.
   ?project_bund <https://local.ontology/local-vivo#budgetLocal> ?budget_bund.
 }
 ```
-#### Select from Graph Distributor für die DFG-Summe "drittmittel_eu"
+#### Select from Graph Distributor "drittmittel_eu"
 Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*. Ersetzen Sie <http://your.vivo/data/eu_uri_here> durch die URI der Instanz für EU aus Ihrem VIVO.
 
 ```
@@ -92,8 +93,53 @@ Select
 
 Where 
 {
-	?project_eu a <http://vivoweb.org/ontology/core#Grant> .
+    ?project_eu a <http://vivoweb.org/ontology/core#Grant> .
  	?project_eu <http://vivoweb.org/ontology/core#assignedBy> <http://your.vivo/data/eu_uri_here> . # An dieser Stelle muss die URI der EU-Instanz aus Ihrem VIVO eingesetzt werden.
-  	?project_eu <https://vivo.tib.eu/fis/ontology/tib-vivo#budgetTIB> ?budget_eu.
+  	?project_eu <https://local.ontology/local-vivo#budgetLocal> ?budget_eu.
 }
 ```
+#### Select from Graph Distributor "drittmittel_land"
+Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*. Ersetzen Sie <http://your.vivo/data/mwk_uri_here> durch die URI der Instanz für eines der Landesministerien aus Ihrem VIVO. Wenn Sie mehrere Landesministerien einsetzen wollen, benutzen Sie die *Value {URI1 URI2 usw.}*
+
+```
+Select
+(sum ( ?budget_land) as ?land)
+
+Where 
+{
+	?project_land a <http://vivoweb.org/ontology/core#Grant> .
+ 	?project_land <http://vivoweb.org/ontology/core#assignedBy> <http://your.vivo/data/mwk_uri_here> . # An dieser Stelle muss die URI des Landesministerium-Instanz aus Ihrem VIVO eingesetzt werden.
+  	?project_land <https://local.ontology/local-vivo#budgetLocal> ?budget_land.
+}
+```
+#### Select from Graph Distributor "drittmittel_wgl"
+Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*. Ersetzen Sie <http://your.vivo/data/wgl_uri_here> durch die URI der Instanz für die Leibniz-Gemeinschaft aus Ihrem VIVO. 
+
+```
+Select
+(sum ( ?budget_wgl) as ?wgl)
+
+Where 
+{
+	?project_wgl a <http://vivoweb.org/ontology/core#Grant> .
+ 	?project_wgl <http://vivoweb.org/ontology/core#assignedBy> <http://your.vivo/data/wgl_uri_here> . # An dieser Stelle muss die URI der Instanz für die Leibniz-Gemeinschaft aus Ihrem VIVO eingesetzt werden.
+  	?project_wgl <https://local.ontology/local-vivo#budgetLocal> ?budget_wgl.
+}
+```
+#### Select from Graph Distributor "drittmittel_stiftung"
+Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*. 
+
+```
+Select
+(sum ( ?budget_stiftung) as ?stiftung)
+
+Where 
+{
+	?project_stiftung a <http://vivoweb.org/ontology/core#Grant> .
+ 	?project_stiftung <http://vivoweb.org/ontology/core#assignedBy> ?funder_stiftung .
+    ?funder_stiftung a <http://vivoweb.org/ontology/core#Foundation> .
+    ?project_stiftung <https://local.ontology/local-vivo#budgetLocal> ?budget_stiftung  .
+    
+}
+```
+### Schritt 3: Konfiguration des Reports 

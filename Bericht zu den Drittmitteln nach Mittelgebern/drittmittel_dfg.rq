@@ -1,0 +1,9 @@
+Select
+(sum ( ?budget_dfg) as ?dfg)
+
+Where 
+{
+?project_dfg a <http://vivoweb.org/ontology/core#Grant> .
+?project_dfg <http://vivoweb.org/ontology/core#assignedBy> <http://your.vivo/data/dfg_uri_here> . # An dieser Stelle muss die URI der DFG-Instanz aus Ihrem VIVO eingesetzt werden.
+?project_dfg <https://local.ontology/local-vivo#budgetLocal> ?budget_dfg.
+}

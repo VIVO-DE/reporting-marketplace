@@ -1,0 +1,10 @@
+Select 
+(sum ( ?budget_bund) as ?bund)
+
+Where 
+{
+  ?project_bund a <http://vivoweb.org/ontology/core#Grant> .
+  ?project_bund <http://vivoweb.org/ontology/core#assignedBy> ?funder_bund . 
+  Values ?funder_bund {<http://your.vivo/data/bmbf_uri_here> <http://your.vivo/data/bmg_uri_here> <http://your.vivo/data/bmwi_uri_here>}. # An dieser Stelle müssen die URIs der Ministerien aus Ihrem VIVO eingesetzt werden.
+  ?project_bund <https://local.ontology/local-vivo#budgetLocal> ?budget_bund.
+}

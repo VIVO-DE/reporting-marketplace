@@ -40,6 +40,7 @@ Where {
 Für die Gesamtsumme der Drittmittel im Jahr und für jeden Drittmittelgeber wird jeweils ein separater *Select from Graph* Distributor angelegt.
 
 #### Select from Graph Distributor für die Gesamtsumme "drittmittel_total"
+Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*.
 ```
 Select 
 (sum ( ?budget) as ?total)
@@ -52,4 +53,49 @@ Where {
  	 
  	
 }
+```
+#### Select from Graph Distributor für die DFG-Summe "drittmittel_dfg"
+Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*. Ersetzen Sie <http://your.vivo/data/dfg_uri_here> durch die URI der Instanz für DFG aus Ihrem VIVO.
+
+```
+Select
+(sum ( ?budget_dfg) as ?dfg)
+
+Where 
+{
+?project_dfg a <http://vivoweb.org/ontology/core#Grant> .
+?project_dfg <http://vivoweb.org/ontology/core#assignedBy> <http://your.vivo/data/dfg_uri_here> . # An dieser Stelle muss die URI der DFG-Instanz aus Ihrem VIVO eingesetzt werden.
+?project_dfg <https://local.ontology/local-vivo#budgetLocal> ?budget_dfg.
+}
+
+```
+#### Select from Graph Distributor für die DFG-Summe "drittmittel_bund"
+Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*.
+```
+Select 
+(sum ( ?budget_bund) as ?bund)
+
+Where {
+  ?project_bund a <http://vivoweb.org/ontology/core#Grant> .
+  ?project_bund <http://vivoweb.org/ontology/core#assignedBy> ?funder_bund . 
+  ?funder_bund a <http://vivoweb.org/ontology/core#GovernmentAgency> .
+  ?project_bund <https://local.ontology/local-vivo#budgetLocal> ?budget_bund.
+}
+```
+#### Select from Graph Distributor für die DFG-Summe "drittmittel_eu"
+Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*. Ersetzen Sie <http://your.vivo/data/eu_uri_here> durch die URI der Instanz für EU aus Ihrem VIVO.
+
+```
+Select
+(sum ( ?budget_eu) as ?eu)
+
+Where 
+
+   	{
+	?project_eu a <http://vivoweb.org/ontology/core#Grant> .
+ 	?project_eu <http://vivoweb.org/ontology/core#assignedBy> <http://your.vivo/data/eu_uri_here> . # An dieser Stelle muss die URI der EU-Instanz aus Ihrem VIVO eingesetzt werden.
+  	?project_eu <https://vivo.tib.eu/fis/ontology/tib-vivo#budgetTIB> ?budget_eu.
+ 
+    
+  	}
 ```

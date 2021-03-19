@@ -10,7 +10,7 @@ Berichtsanforderungen:
 
 
 
-Anleitung in 4 Schritten: Wie erstelle ich den Publikationsbericht mit Vitro Query Tool?
+# Anleitung in 4 Schritten: Wie erstelle ich den Publikationsbericht mit Vitro Query Tool?
 
 
 ## Data Distributor

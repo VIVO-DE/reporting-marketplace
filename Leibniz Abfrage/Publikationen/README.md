@@ -298,7 +298,8 @@ WHERE
 2. In dem Menu _Excel Template_ benennen Sie den Report - z. B. _publications 2020_.
 3. Wählen Sie den Open-Access-Distributor - _openaccess2020_, vergeben Sie einen Ausgangsnamen von _openaccess_. 
 4. Wählen Sie den Nicht-Open-Access-Distributor - _nonopenaccess2020_, weisen Sie einen Ausgangsnamen _nonopenaccess_ zu.
-5. Laden Sie die Excel-Vorlage hoch.
+5. Legen Sie die Reihenfolge der Ausgabe-Elemente, wie diese in Ihrem Bericht angezeigt werden sollen, mittels des Ranks fest.
+6. Laden Sie die Excel-Vorlage hoch.
 
 Die Vorlage muss zwei Tabellen enthalten. Markieren Sie für jede Tabelle alle Zellen (auch die Überschriften / Beschriftungen) und vergeben Sie die Namen _openaccess_ / _nonopenaccess_.
 

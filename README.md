@@ -24,4 +24,4 @@ Zwei Reporting-Engines strukturieren die Daten anhand der vordefinierten Vorlage
 
 ## SPARQL
 
-Die Abfragen in den "Select from" Distributoren werden in Abfragesprache [SPARQL](https://www.w3.org/TR/rdf-sparql-query/) geschrieben. SPARQL ist die für Datenabfrage im RDF (Resource Description Framework) entwickelt worden.
+Die Abfragen in den "Select from" Distributoren werden in Abfragesprache [SPARQL](https://www.w3.org/TR/rdf-sparql-query/) geschrieben. SPARQL ist die für Datenabfrage im RDF-Format (Resource Description Framework) entwickelt worden.

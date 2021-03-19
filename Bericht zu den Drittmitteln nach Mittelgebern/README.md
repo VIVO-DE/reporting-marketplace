@@ -142,4 +142,17 @@ Where
     
 }
 ```
-### Schritt 3: Konfiguration des Reports 
+### Schritt 3: Report erstellen 
+Die Verwaltung von den Reports findet unter http://vivo.../.../admin/reporting statt.
+
+Wählen Sie die Option Excel Template und klicken Sie auf Add Report.
+In dem Menu Excel Template benennen Sie den Report - z. B. Drittmittel2020.
+Wählen Sie für jeden Drittmittelgeber, der in Tabelle vorkommt, den entsprechenden Distributor: drittmittel_total, drittmittel_dfg, drittmittel_bund usw.. Vergeben Sie jeweils einen Ausgangsnamen: drittmittel_total, drittmittel_dfg, drittmittel_bund usw.
+Legen Sie die Reihenfolge der Ausgabe-Elemente, wie diese in Ihrem Bericht angezeigt werden sollen, mittels des Ranks fest. 
+Laden Sie die Excel-Vorlage hoch.
+
+In der Excel-Vorlage für diesen Bericht sind die Zellen / Bereiche für den jeweiligen Drittmittelgeber und die Summe entsprechend dem Output-Namen genannt.
+
+Als Pfad zur Ausgabe der Werte dient jeweils die Variable aus der Abfrage plus .value - z. B. *${total.value}*.
+
+![Beispiel Template Drittmittel nach Drittmittelgeber](img.png)

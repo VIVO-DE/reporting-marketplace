@@ -5,11 +5,11 @@ Queries und Reporting-Templates sind institutionsübergreifend oft ähnlich. In 
 
 ## Vitro Query Tool
 
-Das Vitro Query Tool - ist ein auf der [Data Distribution API](https://wiki.lyrasis.org/display/VIVODOC110x/Data+Distribution+API) basierendes Werkzeug, das einerseits eine Benutzeroberfläche für die Konfiguration von Datenbfragen (mithilfe von so genannten *data distributors*) ermöglicht und andererseits die Konfiguration und Erstellung von Berichten in Excel und Word erlaubt. Die Daten für einzelne Berichte werden von so genannten *Data Distributors* geliefert. 
+Das [*Vitro Query Tool*](https://doi.org/10.6084/m9.figshare.9897008.v1) - ist ein auf der [*Data Distribution API*](https://wiki.lyrasis.org/display/VIVODOC110x/Data+Distribution+API) basierendes Werkzeug, das einerseits eine Benutzeroberfläche für die Konfiguration von Datenbfragen (mithilfe von so genannten *data distributors*) ermöglicht und andererseits die Konfiguration und Erstellung von Berichten in Excel und Word erlaubt. Die Daten für einzelne Berichte werden von so genannten *Data Distributors* geliefert. 
 
 Die Definition und Formatiering der Berichte erfolgt mittels zwei verschiedener Engines anhand vordefinierter Vorlagen (Templates):
-1. Konversion von JSON-Dateien in XML für ihre Weiterverarbeitung in Berichte auf Basis von OpenDOPE-Templates
-2. Direkte Umwandlung von JSON-Dateien in Berichte anhand "einfacher" Word- und Excel-Templates.
+1. [*OpenDOPE*](https://www.opendope.org/) - Konversion von JSON-Dateien in XML für ihre Weiterverarbeitung in Berichte auf Basis von OpenDOPE-Templates
+2. Word- und Excel-Templates - direkte Umwandlung von JSON-Dateien in Berichte in Word- und Excel-Dokumente.
 
 ### Distributoren
 Die [*Data Distribution API*](https://wiki.lyrasis.org/display/VIVODOC111x/Data+Distribution+API) wird genutzt, um Daten-Feeds aus VIVO zur Verfügung zu stellen. Die hier aufgeführten Selektoren liefern diese Daten in JSON aus.

@@ -9,7 +9,9 @@ Berichtsanforderungen:
 - Beiträge in Sammelbänden
 
 
+
 Anleitung in 4 Schritten: Wie erstelle ich den Publikationsbericht mit Vitro Query Tool?
+
 
 ## Data Distributor
 

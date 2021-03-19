@@ -1,6 +1,15 @@
-# Leibniz-Abfrage Publikationen
+# Leibniz-Abfrage 9.1.2: Publikationen nach Berichtsjahr
 
-Wie erstelle ich einen Publikationsbericht für die Leibniz-Abfrage mit Vitro Query Tool?
+Berichtsanforderungen:
+- Veröffentlichte Publikationen insgesamt
+- Zeitschriftenbeiträge
+	- davon referierte Beiträge in Fachzeitschriften
+- Monografien
+- Working Papers / Reports
+- Beiträge in Sammelbänden
+
+
+Anleitung in 4 Schritten: Wie erstelle ich den Publikationsbericht mit Vitro Query Tool?
 
 ## Data Distributor
 

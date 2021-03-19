@@ -1,0 +1,11 @@
+Select
+(sum ( ?budget_stiftung) as ?stiftung)
+
+Where 
+{
+	?project_stiftung a <http://vivoweb.org/ontology/core#Grant> .
+ 	?project_stiftung <http://vivoweb.org/ontology/core#assignedBy> ?funder_stiftung .
+    ?funder_stiftung a <http://vivoweb.org/ontology/core#Foundation> .
+    ?project_stiftung <https://local.ontology/local-vivo#budgetLocal> ?budget_stiftung  .
+    
+}

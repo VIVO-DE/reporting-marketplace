@@ -7,7 +7,7 @@ Queries und Reporting-Templates sind institutionsübergreifend oft ähnlich. In 
 
 Vitro Query Tool - ist ein auf [Data Distribution API](https://wiki.lyrasis.org/display/VIVODOC110x/Data+Distribution+API) basierter Tool, der einerseits die Benutzeroberfläche für die Konfiguration der Datenbfragen (mithilfe von den so genannten Data Distributoren) bietet und andererseits die Konfiguration und Erstellung von Berichten in Excel und Word ermöglicht. 
 Data Distributoren, insbesondere die "Select from ..." Distributoren, liefern Daten für einzelne Berichte. 
-Zwei Reporting-Engines strukturieren die Daten anhand der vordefinierten Vorlagen (Templates)  und wandeln diese in die Berichte um:
+Zwei Reporting-Engines strukturieren die Daten anhand der vordefinierten Vorlagen (Templates)  und wandeln diese in Berichte um:
 1. Konversion von JSON-Dateien in XML für ihre Weiterverarbeitung in Berichte auf Basis von OpenDOPE-Templates
 2. Direkte Umwandlung von JSON-Dateien in Berichte anhand "einfacher" Word- und Excel-Templates.
 

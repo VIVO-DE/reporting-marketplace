@@ -1,0 +1,11 @@
+Select 
+(sum ( ?budget) as ?total)
+
+Where {
+  	
+    ?project a <http://vivoweb.org/ontology/core#Grant> .
+    ?project <https://local.ontology/local-vivo#budgetLocal> ?budget.
+ 	?project <http://vivoweb.org/ontology/core#assignedBy> ?funder .
+ 	 
+ 	
+}

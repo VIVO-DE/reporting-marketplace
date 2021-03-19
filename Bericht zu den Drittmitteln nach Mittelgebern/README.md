@@ -75,7 +75,8 @@ Wählen Sie bei der Erstellung die Option *Select from Graph Distributor*.
 Select 
 (sum ( ?budget_bund) as ?bund)
 
-Where {
+Where 
+{
   ?project_bund a <http://vivoweb.org/ontology/core#Grant> .
   ?project_bund <http://vivoweb.org/ontology/core#assignedBy> ?funder_bund . 
   ?funder_bund a <http://vivoweb.org/ontology/core#GovernmentAgency> .
@@ -90,12 +91,9 @@ Select
 (sum ( ?budget_eu) as ?eu)
 
 Where 
-
-   	{
+{
 	?project_eu a <http://vivoweb.org/ontology/core#Grant> .
  	?project_eu <http://vivoweb.org/ontology/core#assignedBy> <http://your.vivo/data/eu_uri_here> . # An dieser Stelle muss die URI der EU-Instanz aus Ihrem VIVO eingesetzt werden.
   	?project_eu <https://vivo.tib.eu/fis/ontology/tib-vivo#budgetTIB> ?budget_eu.
- 
-    
-  	}
+}
 ```

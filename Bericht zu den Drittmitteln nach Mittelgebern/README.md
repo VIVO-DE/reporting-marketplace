@@ -153,6 +153,6 @@ Laden Sie die Excel-Vorlage hoch.
 
 In der Excel-Vorlage für diesen Bericht sind die Zellen / Bereiche für den jeweiligen Drittmittelgeber und die Summe entsprechend dem Output-Namen genannt.
 
-Als Pfad zur Ausgabe der Werte dient jeweils die Variable aus der Abfrage plus .value - z. B. *${total.value}*.
+Als Pfad zur Ausgabe der Werte dient jeweils die Variable aus der Abfrage plus .value - z. B. *${dfg.value}*.
 
-![Beispiel Template Drittmittel nach Drittmittelgeber](img.png)
+![Beispiel Template Drittmittel nach Drittmittelgeber](Beispiel_Template_Drittmittel_nach_Drittmittelgeber.png)

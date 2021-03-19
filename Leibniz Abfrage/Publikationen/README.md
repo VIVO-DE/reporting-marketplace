@@ -1,6 +1,6 @@
-# Lebniz-Abfrage Publikationen
+# Leibniz-Abfrage Publikationen
 
-Wie erstelle ich einen Publikationsbericht für die Lebniz-Abfrage mit Vitro Query Tool?
+Wie erstelle ich einen Publikationsbericht für die Leibniz-Abfrage mit Vitro Query Tool?
 
 ## Data Distributor
 

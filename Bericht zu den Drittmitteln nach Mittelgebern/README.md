@@ -1,6 +1,7 @@
 # Drittmittelbewilligungen nach Mittelgeber*innen
 
 Regelmäßige Auswertung im Berichtswesen – Übersicht zu laufenden Drittmittelbewilligungen nach Mittelgeber*innen je Berichtsjahr.
+
 Wichtig: Hier handelt es sich um Drittmittelbewilligungen und nicht um Drittmittelerträge. Die jeweiligen Drittmittel werden dem Berichtsjahr zugeordnet in dem das Projekt bewilligt wurde.
 Berichtsanforderungen:
 
@@ -13,6 +14,8 @@ Berichtsanforderungen:
 	- Stiftungen,
 	- Leibniz-Wettbewerbsverfahren
 	- (…)
+- Berechnung Gesamtsumme
+
 
 ## Data Distributors 
 Um die Daten für den Bericht zu erhalten, wird zunächst ein Subset von Daten mittels eines *Construct Query Graph Builder* Distributor aus Gesamtbestand extrahiert. *Construct Query Graph Builder* Distributor enthält Bedingungen, den die Daten entsprechen sollen. Anschließend wird mittels des *Select from Graph Distributors* die Summe des jeweiligen Budgets aus dem zuvor gebildeten Subset abgefragt.

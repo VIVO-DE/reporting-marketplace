@@ -1,5 +1,18 @@
-# Bericht zu den Drittmitteln nach Mittelgebern
-Die Abfrage erlaubt, Budget-Summen pro Jahr differenziert nach Drittmittelgebern zu erhalten.
+# Drittmittelbewilligungen nach Mittelgeber*innen
+
+Regelmäßige Auswertung im Berichtswesen – Übersicht zu laufenden Drittmittelbewilligungen nach Mittelgeber*innen je Berichtsjahr abrufbar.
+Wichtig: Hier handelt es sich um Drittmittelbewilligungen und nicht um Drittmittelerträge. Die jeweiligen Drittmittel werden dem Berichtsjahr zugeordnet in dem das Projekt bewilligt wurde.
+Berichtsanforderungen:
+-	Je Berichtsjahr
+-	Ausgabe nach Mittelgeber: 
+	o	Deutsche Forschungsgemeinschaft (DFG), 
+	o	Deutscher Akademischer Austauschdienst (DAAD), 
+	o	Bund,
+	o	Land,
+	o	Stiftungen,
+	o	Leibniz-Wettbewerbsverfahren
+	o	(…)
+
 ## Data Distributors 
 Um die Daten für den Bericht zu erhalten, wird zunächst ein Subset von Daten mittels eines *Construct Query Graph Builder* Distributor aus Gesamtbestand extrahiert. *Construct Query Graph Builder* Distributor enthält Bedingungen, den die Daten entsprechen sollen. Anschließend wird mittels des *Select from Graph Distributors* die Summe des jeweiligen Budgets aus dem zuvor gebildeten Subset abgefragt.
 ### Schritt 1: Construct Query Graph Builder

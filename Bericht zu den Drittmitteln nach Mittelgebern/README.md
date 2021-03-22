@@ -16,7 +16,7 @@ Berichtsanforderungen:
 	- (…)
 - Berechnung Gesamtsumme
 
-# Anleitung in 4 Schritten: Berichtserstellung mit dem Vitro Query Tool?
+# Anleitung in 4 Schritten: Wie erstelle ich einen Bericht mit Vitro Query Tool?
 
 ## Data Distributors 
 Um die Daten für den Bericht zu erhalten, wird zunächst ein Subset von Daten mittels eines *Construct Query Graph Builder* Distributor aus Gesamtbestand extrahiert. *Construct Query Graph Builder* Distributor enthält Bedingungen, den die Daten entsprechen sollen. Anschließend wird mittels des *Select from Graph Distributors* die Summe des jeweiligen Budgets aus dem zuvor gebildeten Subset abgefragt.

@@ -58,17 +58,9 @@ SELECT
     (COUNT(DISTINCT ?publicationAAPR) AS ?peerreviewed)
     (COUNT(DISTINCT ?publicationBook) AS ?books)
     (COUNT(DISTINCT ?publicationReport) AS ?reports)
-    (COUNT(DISTINCT ?publicationProposal) AS ?proposals)
     (COUNT(DISTINCT ?publicationChapter) AS ?chapters)
-    (COUNT(DISTINCT ?publicationConfPaper) AS ?confpapers)
-    (COUNT(DISTINCT ?publicationSlideshow) AS ?slideshows)
     (COUNT(DISTINCT ?publicationDataset) AS ?datasets)
-    (COUNT(DISTINCT ?publicationConfPoster) AS ?confposters)
-    (COUNT(DISTINCT ?publicationManual) AS ?manuals)
-    (COUNT(DISTINCT ?publicationEA) AS ?editorials)
-    (COUNT(DISTINCT ?publicationAbstract) AS ?abstracts)
-    (COUNT(DISTINCT ?publicationThesis) AS ?theses)
-    (COUNT(DISTINCT ?publicationVideo) AS ?videos)
+    
 WHERE
 {
     {
@@ -107,11 +99,7 @@ WHERE
         ?publicationReport a <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> .
         ?publicationReport <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
     }
-   UNION
-    {
-        ?publicationProposal a <http://vivoweb.org/ontology/core#ResearchProposal> .
-         ?publicationProposal <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
-    }
+   
     UNION
     {
         ?publicationChapter a <http://purl.org/ontology/bibo/Chapter> .
@@ -119,48 +107,8 @@ WHERE
     }
     UNION
     {
-        ?publicationConfPaper a <http://vivoweb.org/ontology/core#ConferencePaper> .
-        ?publicationConfPaper <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
-    }
-    UNION
-    {
-        ?publicationSlideshow a <http://purl.org/ontology/bibo/Slideshow> .
-        ?publicationSlideshow <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
-    }
-    UNION
-    {
         ?publicationDataset a <http://vivoweb.org/ontology/core#Dataset> .
         ?publicationDataset <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
-    }
-    UNION
-    {
-        ?publicationConfPoster a <http://vivoweb.org/ontology/core#ConferencePoster> .
-        ?publicationConfPoster <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
-    }
-    UNION
-    {
-        ?publicationManual a <http://purl.org/ontology/bibo/Manual> .
-        ?publicationManual <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
-    }
-    UNION
-    {
-        ?publicationEA a <http://vivoweb.org/ontology/core#EditorialArticle> .
-        ?publicationEA <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
-    }
-    UNION
-    {
-        ?publicationAbstract a <http://vivoweb.org/ontology/core#Abstract> .
-        ?publicationAbstract <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
-    }
-    UNION
-    {
-        ?publicationThesis a <http://purl.org/ontology/bibo/Thesis> .
-        ?publicationThesis <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
-    }
-    UNION
-    {
-        ?publicationVideo a <http://vivoweb.org/ontology/core#Video> .
-        ?publicationVideo <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .
     }
 }
 ```
@@ -183,17 +131,9 @@ SELECT
     (COUNT(DISTINCT ?publicationAAPR) AS ?peerreviewed)
     (COUNT(DISTINCT ?publicationBook) AS ?books)
     (COUNT(DISTINCT ?publicationReport) AS ?reports)
-	  (COUNT(DISTINCT ?publicationProposal) AS ?proposals)
     (COUNT(DISTINCT ?publicationChapter) AS ?chapters)
-    (COUNT(DISTINCT ?publicationConfPaper) AS ?confpapers)
-    (COUNT(DISTINCT ?publicationSlideshow) AS ?slideshows)
     (COUNT(DISTINCT ?publicationDataset) AS ?datasets)
-    (COUNT(DISTINCT ?publicationConfPoster) AS ?confposters)
-    (COUNT(DISTINCT ?publicationManual) AS ?manuals)
-    (COUNT(DISTINCT ?publicationEA) AS ?editorials)
-    (COUNT(DISTINCT ?publicationAbstract) AS ?abstracts)
-    (COUNT(DISTINCT ?publicationThesis) AS ?theses)
-    (COUNT(DISTINCT ?publicationVideo) AS ?videos)
+    
 WHERE
 {
     {
@@ -232,11 +172,6 @@ WHERE
         ?publicationReport a <http://vivoweb.org/ontology/core#WorkingPaper> .
         MINUS { ?publicationReport <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> .}
     }
-   UNION
-    {
-        ?publicationProposal a <http://vivoweb.org/ontology/core#ResearchProposal> .
-        MINUS { ?publicationProposal <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
-    }
     UNION
     {
         ?publicationChapter a <http://purl.org/ontology/bibo/Chapter> .
@@ -244,49 +179,10 @@ WHERE
     }
     UNION
     {
-        ?publicationConfPaper a <http://vivoweb.org/ontology/core#ConferencePaper> .
-        MINUS { ?publicationConfPaper <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
-    }
-    UNION
-    {
-        ?publicationSlideshow a <http://purl.org/ontology/bibo/Slideshow> .
-        MINUS { ?publicationSlideshow <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
-    }
-    UNION
-    {
         ?publicationDataset a <http://vivoweb.org/ontology/core#Dataset> .
         MINUS { ?publicationDataset <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
     }
-    UNION
-    {
-        ?publicationConfPoster a <http://vivoweb.org/ontology/core#ConferencePoster> .
-        MINUS { ?publicationConfPoster <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
-    }
-    UNION
-    {
-        ?publicationManual a <http://purl.org/ontology/bibo/Manual> .
-        MINUS { ?publicationManual <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
-    }
-    UNION
-    {
-        ?publicationEA a <http://vivoweb.org/ontology/core#EditorialArticle> .
-        MINUS { ?publicationEA <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
-    }
-    UNION
-    {
-        ?publicationAbstract a <http://vivoweb.org/ontology/core#Abstract> .
-        MINUS { ?publicationAbstract <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
-    }
-    UNION
-    {
-        ?publicationThesis a <http://purl.org/ontology/bibo/Thesis> .
-        MINUS { ?publicationThesis <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
-    }
-    UNION
-    {
-        ?publicationVideo a <http://vivoweb.org/ontology/core#Video> .
-        MINUS { ?publicationVideo <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> <http://purl.org/coar/access_right/c_abf2> . }
-    }
+    
 }
 ```
 

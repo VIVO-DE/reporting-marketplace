@@ -19,6 +19,9 @@ Berichtsanforderungen:
 # Anleitung in 4 Schritten: Wie erstelle ich einen Bericht mit Vitro Query Tool?
 
 ## Data Distributors 
+
+**Wichtig: Die Namen des Construct Query Graph Builders und der Data Distributor dürfen keine Leerzeichen enthalten!**
+
 Um die Daten für den Bericht zu erhalten, wird zunächst ein Subset von Daten mittels eines *Construct Query Graph Builder* Distributor aus Gesamtbestand extrahiert. *Construct Query Graph Builder* Distributor enthält Bedingungen, den die Daten entsprechen sollen. Anschließend wird mittels des *Select from Graph Distributors* die Summe des jeweiligen Budgets aus dem zuvor gebildeten Subset abgefragt.
 
 ### Schritt 1: Construct Query Graph Builder

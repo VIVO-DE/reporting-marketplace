@@ -15,7 +15,7 @@ Berichtsanforderungen:
 
 ## Data Distributor
 
-**!Die Namen des Construct Query Graph Builders und der Data Distributor dürfen keine Leerzeichen enthalten.!**
+**Wichtig: Die Namen des Construct Query Graph Builders und der Data Distributor dürfen keine Leerzeichen enthalten!**
 
 ### Schritt 1: Construct Query Graph Builder für Publikationen aus dem Berichtsjahr erstellen
 

@@ -22,7 +22,7 @@ Berichtsanforderungen:
 Die Abfrage bezieht sich auf die Publikationen eines bestimmten Jahres. Hierzu dient die Filterbedingung FILTER (STRSTARTS(str(?dateTime), "2020")). Es werden die URIs der Publikationen zusammen mit ihren Typ-Informationen und Informationen zum Open Access abgerufen. 
 
 ```
-/CONSTRUCT {
+CONSTRUCT {
   ?publication <http://www.w3.org/2000/01/rdf-schema#label> ?label .
   ?publication a ?type .
   ?publication <http://lod.tib.eu/onto/kdsf/hatZugriffsrechte> ?access .
@@ -43,7 +43,7 @@ Die Abfrage bezieht sich auf die Publikationen eines bestimmten Jahres. Hierzu d
     ?publication <https://vivo.tib.eu/fis/ontology/tib-vivo#preprintOf> ?finalpub .
     ?finalpub a <http://purl.org/ontology/bibo/Document> .
   }
-}/
+}
 ```
 ### Schritt 2: Data Distributor für Open-Access-Publikationen erstellen
 

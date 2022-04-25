@@ -1,7 +1,8 @@
 # Leibniz-Abfrage 9.1.2: Publikationen nach Berichtsjahr
 
 Berichtsanforderungen:
-- Veröffentlichte Publikationen insgesamt
+- Veröffentlichte Publikationen insgesamt; 
+differenziert nach:
 - Zeitschriftenbeiträge
 	- davon referierte Beiträge in Fachzeitschriften
 - Monografien

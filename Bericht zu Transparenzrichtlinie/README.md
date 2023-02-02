@@ -64,7 +64,7 @@ Die Verwaltung von den Reports findet unter http://vivo.../.../admin/reporting s
 Wählen Sie die Option Excel Template und klicken Sie auf Add Report.
 In dem Menu Excel Template benennen Sie den Report - z. B. Transparenzrichtlinie.
 Wählen Sie den entsprechenden Distributor: *Transparenzrichtlinie* aus. Vergeben Sie den Ausgangsnamen: *Transparenzrichtlinie*. Der Ausgangsname muss dem im Template definiertem Namensbereich entsprechen.  
-Laden Sie die [Excel-Vorlage]() hoch.                              
+Laden Sie die [Excel-Vorlage](https://github.com/VIVO-DE/reporting-marketplace/blob/main/Bericht%20zu%20Transparenzrichtlinie/Transparenzrichtlinie.xlsx) hoch.                              
 Im Template dient jeweils die Variable aus der Abfrage plus .value - z. B. *${orgUnit.value}* als Pfad. Neben dem Namensbereich zum jeweiligen Wert und Output, wird in diesem Template auch der Namensbereich für die Kopfzeile definiert.
 
 ![Beispiel Bericht Transparenzrichtlinie](Beispiel_Bericht_Transparenzrichtlinie.png)

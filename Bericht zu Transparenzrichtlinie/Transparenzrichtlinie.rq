@@ -1,0 +1,37 @@
+Select  (MIN(?label) AS ?projekttitel) ?funderLabel   ?projektzeit ?budget   (Group_Concat ( distinct ?orgLabel ; Separator = ", ")As ?orgUnit)
+Where {
+ ?projekt a <http://vivoweb.org/ontology/core#Grant> .
+ ?projekt <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+ ?projekt <http://vivoweb.org/ontology/core#totalAwardAmount> ?tam.
+  Bind(str(?tam)AS ?budget)
+
+
+ Optional {
+ ?projekt <http://vivoweb.org/ontology/core#assignedBy> ?funder .
+ ?funder <http://www.w3.org/2000/01/rdf-schema#label> ?funderl .
+ Bind(str(?funderl)AS ?funderLabel)
+ }
+
+  Optional {
+  ?projekt <http://vivoweb.org/ontology/core#relates> ?org .
+  ?org <http://purl.obolibrary.org/obo/RO_0000053> ?adminRole .
+  ?adminRole a <http://vivoweb.org/ontology/core#AdministratorRole> .
+  ?org <http://www.w3.org/2000/01/rdf-schema#label> ?orgLabel1.
+  Bind((?orgLabel1) As ?orgLabel)
+
+  }
+
+  ?projekt <http://vivoweb.org/ontology/core#dateTimeInterval> ?dti .
+  ?dti <http://vivoweb.org/ontology/core#end> ?end .
+  ?dti  <http://vivoweb.org/ontology/core#start> ?start .
+  ?start <http://vivoweb.org/ontology/core#dateTime> ?startdate .
+  Bind(SUBSTR(str(?startdate), 1,10) as ?begin)
+  ?end <http://vivoweb.org/ontology/core#dateTime> ?enddate .
+  Bind(SUBSTR(str(?enddate), 1,10) as ?ende)
+  Bind(concat (?begin, ' - ', ?ende)AS ?projektzeit)
+
+
+
+ }
+Group by ?projekttitel ?funderLabel ?projektzeit ?budget ?orgUnit
+Order by ?projekttitel

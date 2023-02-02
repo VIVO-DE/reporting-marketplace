@@ -8,7 +8,7 @@ differenziert nach:
 - Monografien
 - Working Papers / Reports
 - Beiträge in Sammelbänden
-- Differenzierung nach Unterarten von Open Access (Open Access G
+
 
 
 # Anleitung in 4 Schritten: Wie erstelle ich den Publikationsbericht mit Vitro Query Tool?

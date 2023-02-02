@@ -21,7 +21,8 @@ differenziert nach:
 - Beiträge in Sammelbänden
 - Differenzierung nach Unterarten von Open Access (Open Access Gold und Open Access Green)
 
-# Anleitung in 4 Schritten: Wie erstelle ich den Publikationsbericht mit Vitro Query Tool?
+**Wichtig: für diesen Report muss zusätzlich das erweiterte  [Open-Access-Modell](https://github.com/VIVO-DE/reporting-marketplace/blob/main/Leibniz%20Abfrage/Publikationen%20im%20Berichtsjahr%20(Teil%2018.3.1%20und%2018.3.2)/OA_Modell.owl) ins VIVO importiert werden.** 
+# Anleitung in 5 Schritten: Wie erstelle ich den Publikationsbericht mit Vitro Query Tool?
 
 ## Data Distributor
 
@@ -250,7 +251,7 @@ WHERE
 
 ```
 
-### Schritt 4: Report erstellen
+### Schritt 5: Report erstellen
 
 **Die Verwaltung von den Reports findet unter http://vivo.../.../admin/reporting statt.**
 

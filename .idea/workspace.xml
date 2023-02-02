@@ -26,10 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c038c13f-b3be-4b15-bb33-5ddd134b0dca" name="Default Changelist" comment="Hinzugefügt Link zum Template">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Leibniz Abfrage/Publikationen/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Leibniz Abfrage/Publikationen/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="c038c13f-b3be-4b15-bb33-5ddd134b0dca" name="Default Changelist" comment="Minor fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675359985953</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Hinzugefügt Leibnizabfrage Publikationen im Berichtsjahr (Teil 18.3.1 und 18.3.2)">
+      <created>1675366532479</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675366532479</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Minor fix">
+      <created>1675366698276</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675366698276</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,17 +122,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hinzugefügt Dateien für den Bericht zur Transparenzrichtlinie" />
     <MESSAGE value="Hinzugefügt Link zum Template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hinzugefügt Link zum Template" />
+    <MESSAGE value="Hinzugefügt Leibnizabfrage Publikationen im Berichtsjahr (Teil 18.3.1 und 18.3.2)" />
+    <MESSAGE value="Minor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="341" key="IDE.errors.dialog" timestamp="1675358881052">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="0" y="341" key="IDE.errors.dialog/1920.132.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1675358881052" />
-    <state x="1039" y="384" key="Vcs.Push.Dialog.v2" timestamp="1675360019367">
+    <state x="1039" y="384" key="Vcs.Push.Dialog.v2" timestamp="1675366701272">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="1039" y="384" key="Vcs.Push.Dialog.v2/1920.132.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1675360019367" />
+    <state x="1039" y="384" key="Vcs.Push.Dialog.v2/1920.132.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1675366701272" />
     <state x="1440" y="540" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1675359513107">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

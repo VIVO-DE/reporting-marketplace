@@ -260,7 +260,7 @@ WHERE
 4. Wählen Sie den Open-Access-Gold-Distributor - _openaccessGold2022_, vergeben Sie einen Ausgangsnamen von _openaccessGold_. 
 5. Wählen Sie den Open-Access-Grenn-Distributor - _openaccessGreen2022_, vergeben Sie einen Ausgangsnamen von _openaccessGreen_.
 6. Legen Sie die Reihenfolge der Ausgabe-Elemente, wie diese in Ihrem Bericht angezeigt werden sollen, mittels des Ranks fest.
-7. Laden Sie die [Excel-Vorlage](publications%202022.xlsx) hoch.
+7. Laden Sie die [Excel-Vorlage](https://github.com/VIVO-DE/reporting-marketplace/blob/Reporting_Marketplace_TW/Leibniz%20Abfrage/Publikationen%20im%20Berichtsjahr%20(Teil%2018.3.1%20und%2018.3.2)/publications%202022.xlsx) hoch.
 
 Im Template dient jeweils die Variable aus der Abfrage plus .value - z. B. *${articles.value}* als Pfad. Neben dem Namensbereich zum jeweiligen Wert und Output, wird in diesem Template auch der Namensbereich für die Kopfzeile definiert.
 Die Vorlage enthält zwei Tabellen. Markieren Sie für jede Tabelle alle Zellen (auch die Überschriften / Beschriftungen) und vergeben Sie die Namen _openaccessGold_ / _openaccessGreen_ / _nonopenaccess_.
@@ -268,5 +268,5 @@ Die Vorlage enthält zwei Tabellen. Markieren Sie für jede Tabelle alle Zellen 
 
 Verwenden Sie in jeder Tabelle die Variablen aus der Abfrage plus _.value_ als Pfad zur Ausgabe der Werte. Z. B:
 
-![Beispiel Publikationen Template](Beispiel_Publikationen Template.png)
+![Beispiel Publikationen Template](https://github.com/VIVO-DE/reporting-marketplace/blob/Reporting_Marketplace_TW/Leibniz%20Abfrage/Publikationen%20im%20Berichtsjahr%20(Teil%2018.3.1%20und%2018.3.2)/Beispiel_Publikationen_Template.png)
 

@@ -26,9 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c038c13f-b3be-4b15-bb33-5ddd134b0dca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c038c13f-b3be-4b15-bb33-5ddd134b0dca" name="Default Changelist" comment="Hinzugefügt Link zum Template">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Leibniz Abfrage/Publikationen/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Leibniz Abfrage/Publikationen/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,21 @@
       <option name="presentableId" value="Default" />
       <updated>1675358646725</updated>
     </task>
+    <task id="LOCAL-00001" summary="Hinzugefügt Dateien für den Bericht zur Transparenzrichtlinie">
+      <created>1675359730845</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675359730845</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Hinzugefügt Link zum Template">
+      <created>1675359985953</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675359985953</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,15 +108,20 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Hinzugefügt Dateien für den Bericht zur Transparenzrichtlinie" />
+    <MESSAGE value="Hinzugefügt Link zum Template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hinzugefügt Link zum Template" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="0" y="341" key="IDE.errors.dialog" timestamp="1675358881052">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="0" y="341" key="IDE.errors.dialog/1920.132.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1675358881052" />
-    <state x="1039" y="384" key="Vcs.Push.Dialog.v2" timestamp="1675358787909">
+    <state x="1039" y="384" key="Vcs.Push.Dialog.v2" timestamp="1675360019367">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="1039" y="384" key="Vcs.Push.Dialog.v2/1920.132.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1675358787909" />
+    <state x="1039" y="384" key="Vcs.Push.Dialog.v2/1920.132.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1675360019367" />
     <state x="1440" y="540" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1675359513107">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

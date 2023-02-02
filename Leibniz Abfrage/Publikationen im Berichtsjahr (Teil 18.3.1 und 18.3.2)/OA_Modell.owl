@@ -1,0 +1,180 @@
+@prefix : <http://lod.tib.eu/onto/vivo-oa/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://lod.tib.eu/onto/vivo-oa/> .
+
+<http://lod.tib.eu/onto/vivo-oa/> rdf:type owl:Ontology ;
+                                   owl:versionIRI <http://lod.tib.eu/onto/vivo-oa/0.1/> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://lod.tib.eu/onto/vivo-oa/has_access
+<http://lod.tib.eu/onto/vivo-oa/has_access> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                             rdfs:range <http://lod.tib.eu/onto/vivo-oa/Publication_Access> ;
+											 rdfs:label "Zugriff"@de-DE ,
+                                                         "access"@en-US .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://lod.tib.eu/onto/vivo-oa/Non_Open_Access
+<http://lod.tib.eu/onto/vivo-oa/Non_Open_Access> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://lod.tib.eu/onto/vivo-oa/Publication_Access> ;
+                                                  owl:disjointWith <http://lod.tib.eu/onto/vivo-oa/Open_Access> ;
+                                                  rdfs:label "Non Open Access"@en-US ,
+                                                             "Non-open Access"@de-DE .
+
+
+###  http://lod.tib.eu/onto/vivo-oa/Open_Access
+<http://lod.tib.eu/onto/vivo-oa/Open_Access> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://lod.tib.eu/onto/vivo-oa/Publication_Access> ;
+                                              rdfs:label "Open Access"@de-DE ,
+                                                         "Open Access"@en-US .
+
+
+###  http://lod.tib.eu/onto/vivo-oa/Publication_Access
+<http://lod.tib.eu/onto/vivo-oa/Publication_Access> rdf:type owl:Class ;
+                                                     rdfs:label "Access"@en-US ,
+                                                                "Zugriff"@de-DE .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+<http://purl.obolibrary.org/obo/IAO_0000030> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://lod.tib.eu/onto/vivo-oa/Closed_Access
+<http://lod.tib.eu/onto/vivo-oa/Closed_Access> rdf:type owl:NamedIndividual ,
+                                                         <http://lod.tib.eu/onto/vivo-oa/Non_Open_Access> ;
+														 rdfs:label "closed access"@en-US ,
+                                                                "Closed Access"@de-DE .
+
+
+###  http://lod.tib.eu/onto/vivo-oa/Open_Access_Bronze
+<http://lod.tib.eu/onto/vivo-oa/Open_Access_Bronze> rdf:type owl:NamedIndividual ,
+                                                              <http://lod.tib.eu/onto/vivo-oa/Open_Access> ;
+															  rdfs:label "Open Access Bronze"@en-US ,
+                                                                "Open Access Bronze"@de-DE .
+
+
+###  http://lod.tib.eu/onto/vivo-oa/Open_Access_General
+<http://lod.tib.eu/onto/vivo-oa/Open_Access_General> rdf:type owl:NamedIndividual ,
+                                                               <http://lod.tib.eu/onto/vivo-oa/Open_Access> ;
+															  rdfs:label "Open Access"@en-US ,
+                                                                "Open Access"@de-DE .
+
+
+###  http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold
+<http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> rdf:type owl:NamedIndividual ,
+                                                            <http://lod.tib.eu/onto/vivo-oa/Open_Access> ;
+															  rdfs:label "Open Access Gold"@en-US ,
+                                                                "Open Access Gold"@de-DE .
+
+
+###  http://lod.tib.eu/onto/vivo-oa/Open_Access_Green
+<http://lod.tib.eu/onto/vivo-oa/Open_Access_Green> rdf:type owl:NamedIndividual ,
+                                                             <http://lod.tib.eu/onto/vivo-oa/Open_Access> ;
+															  rdfs:label "Open Access Green"@en-US ,
+                                                                "Open Access Green"@de-DE .
+
+
+###  http://lod.tib.eu/onto/vivo-oa/Open_Access_Hybrid
+<http://lod.tib.eu/onto/vivo-oa/Open_Access_Hybrid> rdf:type owl:NamedIndividual ,
+                                                              <http://lod.tib.eu/onto/vivo-oa/Open_Access> ;
+															  rdfs:label "Open Access Hybrid"@en-US ,
+                                                                "Open Access Hybrid"@de-DE .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Closed_Access>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Bronze>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Closed_Access>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_General>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Closed_Access>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Closed_Access>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Green>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Closed_Access>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Hybrid>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Open_Access_Bronze>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Open_Access_Bronze>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Green>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Open_Access_Bronze>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Hybrid>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Green>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Hybrid>
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( <http://lod.tib.eu/onto/vivo-oa/Open_Access_Green>
+                        <http://lod.tib.eu/onto/vivo-oa/Open_Access_Hybrid>
+                      )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

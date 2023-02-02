@@ -1,0 +1,58 @@
+```
+
+SELECT
+    (COUNT(DISTINCT ?publication) AS ?total)
+    (COUNT(DISTINCT ?publicationAA) AS ?articles)
+    (COUNT(DISTINCT ?publicationAAPR) AS ?peerreviewed)
+    (COUNT(DISTINCT ?publicationBook) AS ?books)
+    (COUNT(DISTINCT ?publicationReport) AS ?reports)
+    (COUNT(DISTINCT ?publicationChapter) AS ?chapters)
+
+
+WHERE
+{
+    {
+        ?publication a ?type .
+        ?publication <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> .
+
+    }
+    UNION
+    {
+        ?publicationAA a <http://purl.org/ontology/bibo/AcademicArticle> .
+        ?publicationAA <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> .
+    }
+    UNION
+    {
+        ?publicationAAPR a <http://purl.org/ontology/bibo/AcademicArticle> .
+        ?publicationAAPR <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/peerReviewed> .
+        ?publicationAAPR <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> .
+    }
+    UNION
+    {
+        ?publicationBook a <http://purl.org/ontology/bibo/Book> .
+        ?publicationBook <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> .
+        MINUS { ?publicationBook a <http://purl.org/ontology/bibo/Proceedings> . }
+    }
+
+    UNION
+    {
+        ?publicationReport a <http://purl.org/ontology/bibo/Report> .
+        ?publicationReport <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> .
+    }
+    UNION
+    {
+        ?publicationReport a <http://vivoweb.org/ontology/core#WorkingPaper> .
+        ?publicationReport <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> .
+    }
+    UNION
+    {
+        ?publicationReport a <http://kerndatensatz-forschung.de/owl/Basis#ArbeitspapierForschungsbericht> .
+        ?publicationReport <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> .
+    }
+    UNION
+    {
+        ?publicationChapter a <http://purl.org/ontology/bibo/Chapter> .
+        ?publicationChapter <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> .
+    }
+
+}

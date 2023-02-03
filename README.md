@@ -1,9 +1,10 @@
 # Reporting-Marketplace für VIVO
 
-Queries und Reporting-Templates sind institutionsübergreifend oft ähnlich. In diesem Wiki dokumentieren Mitglieder der deutschen VIVO-Community zur Nachnutzung durch Dritte.
-
+Queries und Reporting-Templates sind institutionsübergreifend oft ähnlich. In diesem Wiki dokumentieren Mitglieder der deutschen VIVO-Community Reporting-Templates zur Nachnutzung durch Dritte.
 
 ## Vitro Query Tool
+
+:loudspeaker: Aktuell wird im TAPIR-Projekt an einem verbesserten Reporting-Tool gearbeitet. Reports für das neue Tool werden dann auch hier verfügbar gemacht.  
 
 Das [*Vitro Query Tool*](https://doi.org/10.6084/m9.figshare.9897008.v1) - ist ein auf der [*Data Distribution API*](https://wiki.lyrasis.org/display/VIVODOC110x/Data+Distribution+API) basierendes Werkzeug, das einerseits eine Benutzeroberfläche für die Konfiguration von Datenbfragen (mithilfe von so genannten *data distributors*) ermöglicht und andererseits die Konfiguration und Erstellung von Berichten in Excel und Word erlaubt. Die Daten für einzelne Berichte werden von so genannten *Data Distributors* geliefert. 
 

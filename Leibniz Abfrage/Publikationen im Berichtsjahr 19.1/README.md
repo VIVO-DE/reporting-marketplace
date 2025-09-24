@@ -8,7 +8,7 @@ Berichtsanforderungen:
 - davon Open Access Gold und Open Access Hybrid
 - davon Open Access Green
 
-**Wichtig: für diesen Report muss zusätzlich das erweiterte  [Open-Access-Modell_v0.2](https://github.com/VIVO-DE/reporting-marketplace/blob/main/Leibniz%20Abfrage/Publikationen%20im%20Berichtsjahr%20(Teil%2018.3.1%20und%2018.3.2)/OA_Modell.owl) ins VIVO importiert werden.** 
+**Wichtig: für diesen Report muss zusätzlich das erweiterte  [Open-Access-Modell_v0.2](https://github.com/VIVO-DE/reporting-marketplace/blob/main/Leibniz%20Abfrage/Publikationen%20im%20Berichtsjahr%2019.1/OA_Modell_v0_2.owl) ins VIVO importiert werden.** 
 # Anleitung in 5 Schritten: Wie erstelle ich den Publikationsbericht mit Vitro Query Tool?
 
 ## Data Distributor
@@ -82,8 +82,8 @@ WHERE
 1. Wählen Sie die Option _Excel Template_ und klicken Sie auf _Add Report_.
 2. In dem Menu _Excel Template_ benennen Sie den Report - z. B. _publications 2024_.
 3. Wählen Sie den entsprechenden Distributor, weisen Sie einen Ausgangsnamen _Beispielname_ zu.
-4. Laden Sie die [Excel-Vorlage](https://github.com/VIVO-DE/reporting-marketplace/blob/Reporting_Marketplace_TW/Leibniz%20Abfrage/Publikationen%20im%20Berichtsjahr%20(Teil%2018.3.1%20und%2018.3.2)/publications%202022.xlsx) hoch.
+4. Laden Sie die [Excel-Vorlage](https://github.com/VIVO-DE/reporting-marketplace/blob/main/Leibniz%20Abfrage/Publikationen%20im%20Berichtsjahr%2019.1/publications_2024_template.xlsx) hoch.
 
 Im Template dient jeweils die Variable aus der Abfrage plus .value - z. B. *${total.value}* als Pfad. Neben dem Namensbereich zum jeweiligen Wert und Output, wird in diesem Template auch der Namensbereich für die Kopfzeile definiert.
 
-![Beispiel Publikationen Template](https://github.com/VIVO-DE/reporting-marketplace/blob/Reporting_Marketplace_TW/Leibniz%20Abfrage/Publikationen%20im%20Berichtsjahr%20(Teil%2018.3.1%20und%2018.3.2)/Beispiel_Publikationen_Template.png)
+![Beispiel Publikationen Template](https://github.com/VIVO-DE/reporting-marketplace/blob/main/Leibniz%20Abfrage/Publikationen%20im%20Berichtsjahr%2019.1/Beispiel_Publikationen1_19_Template.png)

@@ -1,0 +1,29 @@
+SELECT
+    (COUNT(DISTINCT ?publication) AS ?total)
+    (COUNT(DISTINCT ?publicationOAGH) AS ?hg)
+    (COUNT(DISTINCT ?publicationOAGr) AS ?green)
+
+WHERE
+{
+    {
+        ?publication a ?type .
+
+
+    }
+    UNION
+    {
+         ?publicationOAGH a ?type .
+        ?publicationOAGH <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Hybrid> .
+    }
+  UNION
+    {
+         ?publicationOAGH a ?type .
+        ?publicationOAGH <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Gold> .
+    }
+   UNION
+    {
+         ?publicationOAGr a ?type .
+       ?publicationOAGr <http://lod.tib.eu/onto/vivo-oa/has_access> <http://lod.tib.eu/onto/vivo-oa/Open_Access_Green> .
+    }
+
+}
